@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+
+import React, { useState } from "react";
+
+// import 'bootstrap/dist/css/bootstrap.min.css'
+import Counter from "./components/counter/Counter";
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
+function App() {
+    const [counter, setCounter] = useState(0);
+
+    const increment = () => {
+        setCounter(counter + 1);
+    };
+    const decreament = () => {
+        setCounter(counter - 1);
+    };
+    const refresh = ()=> {
+        setCounter(0)
+    }
+    
+    return ( <div className = "App" > 
+   
+    <Counter refresh={refresh} decreament={decreament} increment={increment} counter={counter}/>
+   
+    </div> );
+}
 export default App;
