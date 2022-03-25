@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 
-// import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css'j
 import Counter from "./components/counter/Counter";
 
 import './App.css';
@@ -13,9 +13,11 @@ function App() {
     const increment = () => {
         setCounter(counter + 1);
     };
+
     const decreament = () => {
         setCounter(counter - 1);
     };
+    
     const refresh = ()=> {
         setCounter(0)
     }
